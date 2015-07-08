@@ -4,8 +4,29 @@
 
 body {
   padding-bottom: 40px;
+  background: #eee;
   color: #5a5a5a;
   padding-top: 70px;
+}
+/* to fix sign in button location for large screens
+.navbar-right {
+	position: relative;
+	right: 15px;
+}
+*/
+.page {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.jumbotron{
+  text-align: center;
+}
+
+.jumbotron h2{
+  font-size: 60px;
+  font-weight: 100;
 }
 
 

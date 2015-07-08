@@ -8,7 +8,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="{{pathFor 'homePage'}}">Po Paraguay</a>
+	      <a class="navbar-brand" href="{{pathFor 'home'}}">Po Paraguay</a>
 	    </div>
 		<div class="collapse navbar-collapse" id="navigation">
 			<ul class="nav navbar-nav">
@@ -18,9 +18,14 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				{{#if currentUser}}
-					<li><a href="#">Profile</a></li>
+					<li><a href="{{pathFor 'profileHome'}}">Profile</a></li>
 				{{/if}}
-				{{> loginButtons}}
+				{{#if currentUser}}
+					{{> loginButtons}}
+				{{else}}
+					<li><a href="{{pathFor 'login'}}" class="btn btn-info" role="button">Sign In / Up</a></li>
+				{{/if}}
+
 			</ul>
 		</div><!--/.nav-collapse -->
     </nav>
