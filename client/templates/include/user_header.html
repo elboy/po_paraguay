@@ -1,4 +1,4 @@
-<template name="header">
+<template name="userHeader">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
     	<div class="container">
@@ -16,15 +16,8 @@
 					<li><a href="{{pathFor 'extraPages'}}">Page 1</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					{{#if currentUser}}
-						<li><a href="{{pathFor 'profileHome'}}">Profile</a></li>
-					{{/if}}
-					{{#if currentUser}}
-						{{> loginButtons}}
-					{{else}}
-						<li><a href="{{pathFor 'login'}}" class="btn btn-info" role="button">Sign In / Up</a></li>
-					{{/if}}
-
+					<li><a href="{{pathFor 'profileHome'}}">Profile Man</a></li>
+					{{> loginButtons}}
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
