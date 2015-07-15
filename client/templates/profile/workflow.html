@@ -1,4 +1,11 @@
 <template name="workflow">
-	{{> userInfo}}
-	{{> missingHands}}
+	<div class="container">
+		<div class="patient-sign-up">
+			{{> patientFlow}}
+		</div>
+
+		<div><hr></div>
+		
+		{{> missingHands}}
+	</div>
 </template>
