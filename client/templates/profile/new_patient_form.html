@@ -1,8 +1,31 @@
 <template name="newPatientForm">
-	<form>
+	<form id="patient-form">
 		<ul>
+			<li>
+				<div class="btn-group" data-toggle="buttons">
+						<label>
+							<input type="radio" checked name="owner" autocomplete="off" value="true"> For me (preselected) 
+						</label>
+						<label>
+							<input type="radio" name="owner" autocomplete="off" value="false"> For someone else 
+						</label>
+				</div>
+			</li>
 			<li><input type="text" name="first-name" placeholder="First name.."></li>
 			<li><input type="text" name="last-name" placeholder="Last name.."></li>
+			<li><input type="text" name="age" placeholder="Age.."></li>
+			<li><input type="text" name="address" placeholder="Address.."></li>
+			<li>
+				<div class="btn-group" data-toggle="buttons">
+					<label>
+						<input type="radio" name="gender" autocomplete="off" value="Male"> Male (preselected) 
+					</label>
+					<label>
+						<input type="radio" name="gender" autocomplete="off" value="Female"> Female 
+					</label>
+				</div>
+			</li>
+			<li><input type="text" name="phone-number" placeholder="Phone Number.."></li>
 	        <li><input type="submit" value="Add User"></li>
 	    </ul>
 	</form>
