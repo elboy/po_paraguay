@@ -1,12 +1,19 @@
 <template name="workflow">
 	<div class="container">
-		<div class="patient-sign-up">
+		<div class="patient-flow">
 			{{> patientFlow}}
 		</div>
 
 		<div><hr></div>
-		<div class="order-form">
-			{{> orderInfo}}
+
+		<div class="order-flow">
+			{{> orderFlow}}
+		</div>
+
+		<div><hr></div>
+
+		<div class="photo-flow">
+			{{> photoFlow}}
 		</div>
 	</div>
 </template>

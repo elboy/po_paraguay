@@ -1,4 +1,4 @@
-<template name="orderInfo">
+<template name="orderFlow">
 	<h1>For which hand are you ordering?</h1>
 	<div class="row choose-prosthetics">
 		<form id="hands">
@@ -34,6 +34,21 @@
 				<li><input type="submit" value="Next Step"></li>
 			</ul>
 		</form>
+		{{#if finishedOrder}}
+			<h3>Finished Order ({{finishedName.profile.name}}):</h3>
+			<ul>
+				{{#if finishedOrder.left_hand}}
+					<li>
+						Left hand with{{#unless finishedOrder.left_wrist_movement}}out{{/unless}} wrist movement.
+					</li>
+				{{/if}}
+				{{#if finishedOrder.right_hand}}
+					<li>
+						Right hand with{{#unless finishedOrder.right_wrist_movement}}out{{/unless}} wrist movement.
+					</li>
+				{{/if}}
+			</ul>
+		{{/if}}
 	</div>
 
 </template>

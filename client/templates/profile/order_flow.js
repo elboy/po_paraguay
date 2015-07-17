@@ -1,8 +1,19 @@
-Template.orderInfo.helpers({
-
+Template.orderFlow.helpers({
+	'finishedOrder': function(){
+		var submittedOrder = Session.get('currentOrder');
+		var order = Orders.findOne(submittedOrder);
+		return order;
+	},
+	'finishedName': function(){
+		var submittedOrder = Session.get('currentOrder');
+		var order = Orders.findOne(submittedOrder);
+		var user = Meteor.users.findOne(order.user_id);
+		console.log(order);
+		return user;
+	}
 });
 
-Template.orderInfo.events({
+Template.orderFlow.events({
 	'submit form': function(event){
 		event.preventDefault();
 		var leftHand = $('#hands [name="left-hand"]:checked').val();
@@ -14,18 +25,9 @@ Template.orderInfo.events({
 		var hasLWM = (leftHand === 'yes');
 		var hasRWM = (rightHand === 'yes');
 
-	/*	console.log(leftHand);
-		console.log(rightHand);
-		console.log(hasLH);
-		console.log(hasRH);
-		console.log(hasLWM);
-		console.log(hasRWM);*/
-
 		var patientId = Session.get('selectedPatient');
-		//console.log(patientId);
 
-
-		Orders.insert({
+		var orderId = Orders.insert({
 			user_id: Meteor.userId(),
 			patient_id: patientId,
 			created_at: new Date(),
@@ -38,6 +40,9 @@ Template.orderInfo.events({
 			cost: 125,
 			paid: 0
 		});
+		
+		Session.set('currentOrder', orderId);
+		
 	}
 
 
