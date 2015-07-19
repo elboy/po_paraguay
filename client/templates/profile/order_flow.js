@@ -4,12 +4,17 @@ Template.orderFlow.helpers({
 		var order = Orders.findOne(submittedOrder);
 		return order;
 	},
-	'finishedName': function(){
+	'userName': function(){
 		var submittedOrder = Session.get('currentOrder');
 		var order = Orders.findOne(submittedOrder);
 		var user = Meteor.users.findOne(order.user_id);
-		console.log(order);
 		return user;
+	},
+	'patientName': function(){
+		var submittedOrder = Session.get('currentOrder');
+		var order = Orders.findOne(submittedOrder);
+		var patient = Patients.findOne(order.patient_id);
+		return patient;
 	}
 });
 

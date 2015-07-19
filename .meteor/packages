@@ -12,5 +12,6 @@ ian:accounts-ui-bootstrap-3
 accounts-facebook
 sacha:spin
 insecure
-autopublish
 blaze
+lepozepo:cloudinary
+autopublish

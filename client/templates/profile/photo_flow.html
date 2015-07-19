@@ -1,6 +1,29 @@
 <template name="photoFlow">
 	<h1>Upload photos:</h1>
 	<div>
-		
+		<h3>Cloudinary Upload</h3>
+		{{#with stuff}}
+			{{#c_upload callback="save_url"}}
+				<input type="file" multiple="true">
+			{{/c_upload}}
+		{{/with}}
+
+		<h3>Cloudinary Upload Stream</h3>
+		{{#with stuff}}
+			{{#c_upload_stream callback="save_url"}}
+				<input class="upload" type="file" multiple="true">
+			{{/c_upload_stream}}
+		{{/with}}
+
+		{{#each c.uploading_images}}
+			<p>{{percent_uploaded}}</p>
+		{{/each}}
+
+		<h3>Saved images</h3>
+		{{#each saved_images}}
+			<br>
+			<img width="250" src="{{secure_url}}">
+			<button class="delete">Delete</button>
+		{{/each}}
 	</div>
 </template>
