@@ -13,9 +13,6 @@ Template.newPatientForm.events({
 		var isOwner = $('#patient-form [name="owner"]:checked').val();
 		var gender = $('#patient-form [name="gender"]:checked').val();
 
-		//console.log(isOwner);
-		//console.log(gender);
-
 		var patientId = Patients.insert({
 			user_id: Meteor.userId(),
 			created_at: new Date(),
