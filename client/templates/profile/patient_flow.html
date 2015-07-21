@@ -1,14 +1,5 @@
 <template name="patientFlow">
-	<h1>Previous users:</h1>
-	<div class="previous-patients">
-		{{#each patients}}
-			<div class="radio">
-				<label><input class="choose-patient" type="radio" name="current-patient">{{> patientInfo}}</label>
-
-				<input type="button" class="remove-patient" value="Remove User">
-			</div>
-		{{/each}}
-	</div>
+	<!--{{> previousPatients}}-->
 
 	<div class="patient-form">	
 		{{> newPatientForm}}	

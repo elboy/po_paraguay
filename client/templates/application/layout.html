@@ -1,9 +1,6 @@
 <template name="layout">
-	{{#if currentUser}}
-		{{> userHeader}}
-	{{else}}
-		{{> defaultHeader}}
-	{{/if}}
+	{{> header}}
+	
 	<div id="main">
 		{{> yield}}
 	</div>

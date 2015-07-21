@@ -1,10 +1,10 @@
-Template.patientFlow.helpers({
+Template.previousPatients.helpers({
 	patients: function(){
 		return Patients.find({});
 	}
 });
 
-Template.patientFlow.events({
+Template.previousPatients.events({
 	// clicking on a patient sets the Session, 
 	// to continue
 	'click .choose-patient': function(){
