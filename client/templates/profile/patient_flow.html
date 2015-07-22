@@ -1,7 +1,16 @@
 <template name="patientFlow">
-	<!--{{> previousPatients}}-->
-
 	<div class="patient-form">	
-		{{> newPatientForm}}	
+		{{#autoForm collection="Patients" id="insertPatientForm" type="insert"}}
+		<fieldset>
+			<legend>Add a Patient</legend>
+			{{> afQuickField name='first_name'}}
+			{{> afQuickField name='last_name'}}
+			{{> afQuickField name='gender'}}
+			{{> afQuickField name='date_of_birth'}}
+			{{> afQuickField name='address'}}
+			{{> afQuickField name='phone_number'}}
+		</fieldset>
+		<button type="submit" class="btn btn-primary">Insert</button>
+	{{/autoForm}}
 	</div>
 </template>

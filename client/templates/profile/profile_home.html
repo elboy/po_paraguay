@@ -1,5 +1,6 @@
 <template name="profileHome">
 	<div class="container">
+		<!--
 		<h1>Edit an order (progress bars):</h1>
 		{{#each orders}}
 			<div class="order">
@@ -8,8 +9,9 @@
 				<input type="button" class="go-to-order" value="Edit Order">
 			</div>
 		{{/each}}
-
+		-->
+		
 		<h1>Create new order:</h1>
-		<button type="button" class="btn btn-info new-order">Create New Hand</button>
+		<a href="{{pathFor 'workflow'}}" class="btn btn-info new-order" role="button">Create New Hand</a>
 	</div>
 </template>
