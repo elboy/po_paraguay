@@ -11,8 +11,10 @@ iron:router
 ian:accounts-ui-bootstrap-3
 accounts-facebook
 sacha:spin
-insecure
 blaze
 lepozepo:cloudinary
 aldeed:autoform
 aldeed:collection2
+msavin:mongol
+insecure
+autopublish

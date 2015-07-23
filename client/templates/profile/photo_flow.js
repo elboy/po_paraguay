@@ -1,3 +1,4 @@
+  /*
   Template.photoFlow.created = function(){
     Meteor.call("cloudinary_list_all",function(e,list){
       Session.set("image_list",list);
@@ -28,3 +29,4 @@
       });
     }
   });
+  */

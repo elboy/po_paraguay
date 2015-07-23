@@ -20,6 +20,10 @@ div {
   border: 1px solid black;
 }*/
 
+.container {
+  background-color: #ADD8E6;
+}
+
 .col-xs-6 {
   padding-bottom: 10px;
 }

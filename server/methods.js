@@ -1,4 +1,5 @@
 // Server side cloudinary methods
+/*
 Meteor.methods({
 	save_url: function(image){
 		//image has context and upload_data
@@ -10,3 +11,4 @@ Meteor.methods({
 		Images.insert(data);
 	}
 });
+*/
