@@ -1,8 +1,17 @@
 <template name="photoFlow">
-	<h3><u>Order for: {{order.first_name}} {{order.last_name}}</u></h3>
+	<h3><u>Order for: {{this.first_name}} {{this.last_name}}</u></h3>
+
+	<button class="btn btn-info" id="personalize-hand">Personalize</button>
 
 	<h1>Upload photos:</h1>
 	<div>
+		<h3>Saved images</h3>
+		{{#each saved_images}}
+			<br>
+			<img width="250" src="{{secure_url}}">
+			<button class="delete">Delete</button>
+		{{/each}}
+
 		<h3>Cloudinary Upload</h3>
 		{{#with stuff}}
 			{{#c_upload callback="save_url"}}
@@ -20,15 +29,5 @@
 		{{#each c.uploading_images}}
 			<p>{{percent_uploaded}}</p>
 		{{/each}}
-
-		<h3>Saved images</h3>
-		{{#each saved_images}}
-			<br>
-			<img width="250" src="{{secure_url}}">
-			<button class="delete">Delete</button>
-		{{/each}}
 	</div>
-
-	<br>
-	<button class="btn btn-info" id="personalize-hand">Personalize</button>
 </template>

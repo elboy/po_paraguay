@@ -8,6 +8,6 @@ Template.profileHome.events({
 	'click .go-to-order': function(){
 		var orderId = this._id;
 		Session.set('currentOrder', orderId);
-		Router.go('workflow', {_id: orderId});
+		Router.go('photo.upload', {_id: orderId});
 	}
 });
