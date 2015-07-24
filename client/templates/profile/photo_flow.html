@@ -12,12 +12,12 @@
 			<button class="delete">Delete</button>
 		{{/each}}
 
-		<h3>Cloudinary Upload</h3>
+		<h3>Upload Photo</h3>
 		{{#c_upload callback="save_url"}}
 			<input type="file" multiple="true">
 		{{/c_upload}}
-
-		<h3>Cloudinary Upload Stream</h3>
+<!--
+		<h3>Upload Photos</h3>
 		{{#c_upload_stream callback="save_url"}}
 			<input type="file" multiple="true">
 		{{/c_upload_stream}}
@@ -25,5 +25,6 @@
 		{{#each c.uploading_images}}
 			<p>{{percent_uploaded}}</p>
 		{{/each}}
+-->
 	</div>
 </template>

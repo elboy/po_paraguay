@@ -3,7 +3,7 @@ AutoForm.addHooks('updatePersonalization', {
     console.log(error);
   },
   onSuccess: function(formType, result){
-  	Session.set('orderId', this.docId);
+  	//Session.set('orderId', this.docId);
   	Router.go('checkout', {_id: this.docId});
   }
 });
