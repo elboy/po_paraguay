@@ -5,12 +5,6 @@ Template.photoFlow.created = function(){
 }
 
 Template.photoFlow.helpers({
-  'order': function(){
-    return Orders.findOne({_id: Session.get('orderId')});
-  },
-  'stuff':function(){
-    return {name:"something",_id:"12345"}
-  },
   'saved_images':function(){
     return Images.find({});
   },

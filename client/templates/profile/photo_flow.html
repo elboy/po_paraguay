@@ -13,18 +13,14 @@
 		{{/each}}
 
 		<h3>Cloudinary Upload</h3>
-		{{#with stuff}}
-			{{#c_upload callback="save_url"}}
-				<input type="file" multiple="true">
-			{{/c_upload}}
-		{{/with}}
+		{{#c_upload callback="save_url"}}
+			<input type="file" multiple="true">
+		{{/c_upload}}
 
 		<h3>Cloudinary Upload Stream</h3>
-		{{#with stuff}}
-			{{#c_upload_stream callback="save_url"}}
-				<input type="file" multiple="true">
-			{{/c_upload_stream}}
-		{{/with}}
+		{{#c_upload_stream callback="save_url"}}
+			<input type="file" multiple="true">
+		{{/c_upload_stream}}
 
 		{{#each c.uploading_images}}
 			<p>{{percent_uploaded}}</p>

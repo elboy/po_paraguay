@@ -7,6 +7,7 @@ Template.profileHome.helpers({
 Template.profileHome.events({
 	'click .go-to-order': function(){
 		var orderId = this._id;
+		console.log(orderId);
 		Session.set('currentOrder', orderId);
 		Router.go('photo.upload', {_id: orderId});
 	}

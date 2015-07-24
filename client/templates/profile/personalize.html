@@ -1,5 +1,9 @@
 <template name="personalize">
-	<div class="order-form">	
+	{{> quickForm collection="Orders" doc=this id="updatePersonalization" type="update" fields="wrist_color,hand_color,fingers_color" buttonClass="btn btn-info"}}
+			<!--
+	<div class="order-form">
+
+
 		{{#autoForm collection="Orders" doc=this id="updatePersonalization" type="update"}}
 			<fieldset>
 				<legend>Personalize your hand</legend>
@@ -9,5 +13,5 @@
 			</fieldset>
 			<button type="submit" class="btn btn-info">Continue</button>
 		{{/autoForm}}
-	</div>
+	</div>-->
 </template>
