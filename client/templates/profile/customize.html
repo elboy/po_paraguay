@@ -1,3 +1,13 @@
 <template name="personalize">
-	Hiiiii
+	<div class="order-form">	
+		{{#autoForm collection="Orders" doc=this id="updateOrderForm" type="update"}}
+			<fieldset>
+				<legend>Personalize your hand</legend>
+				{{> afQuickField name='wrist_color'}}
+				{{> afQuickField name='hand_color'}}
+				{{> afQuickField name='fingers_color'}}
+			</fieldset>
+			<button type="submit" class="btn btn-info">Continue</button>
+		{{/autoForm}}
+	</div>
 </template>
