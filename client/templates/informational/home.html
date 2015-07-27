@@ -1,133 +1,39 @@
 <template name="home">
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Po Paraguay</h1>
-              <p>Click below to create a hand.</p>
-              <p><a class="btn btn-lg btn-warning" href="{{pathFor 'login'}}" role="button">Create a hand</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Po Paraguay</h1>
-              <p>You can costumize your own prosthetic</p>
-              <p><a class="btn btn-lg btn-warning" href="{{pathFor 'login'}}" role="button">Costumize Your Prosthetic</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Po Paraguay</h1>
-              <p>Just sign up to create a hand</p>
-              <p><a class="btn btn-lg btn-warning" href="{{pathFor 'login'}}" role="button">Sign up</a></p>
-            </div>
-          </div>
-        </div>
+    <div class="jumbotron">
+     <h1>Po Paraguay</h1>
+      <p class="lead">We can put whatever information we want here.</p>
+        <a class="btn btn-large btn-warning" href="{{pathFor 'login'}}">Create a Hand</a>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
 
+      <hr>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="row-fluid marketing">
+        <div class="span6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-    <div class="container marketing">
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="po_logo.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>We can put information here</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="po_logo.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>And here</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="po_logo.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>And here</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">This is a featurette heading. <span class="text-muted">I can put more text here.</span></h2>
-          <p class="lead">And text below. With a picture following.</p>
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="po_logo.png" alt="Generic placeholder image">
+
+        <div class="span6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr>
 
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Another featurette heading. <span class="text-muted">With more text.</span></h2>
-          <p class="lead">Text with information.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="po_logo.png" alt="Generic placeholder image">
-        </div>
+      <div class="footer">
+        <p>&copy; Company 2013</p>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Another featurette heading. <span class="text-muted">With more text.</span></h2>
-          <p class="lead">Text with information.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="po_logo.png" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="/">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="/">Privacy</a> &middot; <a href="/">Terms</a></p>
-      </footer>
-
-    </div><!-- /.container -->
 </template>
