@@ -9,5 +9,9 @@ Template.profileHome.events({
 		var orderId = this._id;
 		//Session.set('currentOrder', orderId);
 		Router.go('photo.upload', {_id: orderId});
+	},
+	'click .go-to-checkout': function(){
+		var orderId = this._id;
+		Router.go('checkout', {_id: orderId});
 	}
 });

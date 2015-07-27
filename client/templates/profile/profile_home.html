@@ -5,8 +5,14 @@
 		<div class="order">
 			<label>{{> orderItem}}</label>
 
-			<input type="button" class="go-to-order" value="Edit Order">
+			<input type="button" class="btn btn-danger go-to-order" value="Edit Order">
+
+			{{#if admin_approval}}
+				<label>Approved: </label>
+				<input type="button" class="btn btn-danger go-to-checkout" value="Checkout">
+			{{/if}}
 		</div>
+		<br>
 	{{/each}}
 	
 

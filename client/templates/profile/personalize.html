@@ -1,6 +1,7 @@
 <template name="personalize">
-	{{> quickForm collection="Orders" doc=this id="updatePersonalization" type="update" fields="wrist_color,hand_color,fingers_color" buttonClass="btn btn-info"}}
-			<!--
+				<!--
+	{{> quickForm collection="Orders" doc=this id="updatePersonalization" type="update" fields="wrist_color,hand_color,fingers_color" buttonClass="btn btn-info"}}-->
+
 	<div class="order-form">
 
 
@@ -11,7 +12,14 @@
 				{{> afQuickField name='hand_color'}}
 				{{> afQuickField name='fingers_color'}}
 			</fieldset>
-			<button type="submit" class="btn btn-info">Continue</button>
+			<button type="button" class="btn btn-info" id="personalize-back">Back</button>
+			<button type="submit" class="btn btn-info">Save</button>
+			{{#if this.admin_approval}}
+				<button type="button" class="btn btn-info" id="personalize-continue">Continue</button>
+			{{else}}
+				<label>Awaiting admin approval</label>
+			{{/if}}
+			
 		{{/autoForm}}
-	</div>-->
+	</div>
 </template>

@@ -37,6 +37,10 @@ Template.photoFlow.events({
       }
     });
   },
+  'click #personal-info': function(){
+    // To update personal info
+    Router.go('update', {_id: this._id});
+  },
   'click #personalize-hand': function(){
     // A user must submit photos before continuing.
     if(Session.get('anyImages')){
