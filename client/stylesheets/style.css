@@ -3,15 +3,17 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  background: #3399FF;
-  color: #5a5a5a;
+  /*background: #3399FF;*/
+  background: #00CC66;
+  color: #000000;
   padding-top: 100px;
   padding-bottom: 40px;
+/*  line-height: 150%; */
 }
 
 .container {
   background: url("cream_dust.png") repeat 0 0;
-  border-radius: 25px;
+  border-radius: 15px;
   padding-bottom: 10px;
   margin: 0 auto;
   max-width: 1000px;
@@ -24,6 +26,23 @@ h1, h2, h3, h4, h5, h6 {
 p, div {
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
 }
+
+.btn-left {
+  float: left;
+}
+
+.btn-right {
+  float: right;
+}
+
+/* To center photo
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+*/
 /* to fix sign in button location for large screens
 .navbar-right {
 	position: relative;
@@ -36,6 +55,7 @@ div {
   border: 1px solid black;
 }
 */
+
 /*
 .col-xs-6 {
   padding-bottom: 10px;
@@ -65,7 +85,7 @@ div {
 }
 
 .login-navbar {
-  background: #eee;
+  background: #00CC66;
   padding-top: 30px;
   padding-left: 100px;
   padding-bottom: 100px;

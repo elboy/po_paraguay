@@ -12,11 +12,11 @@
 				{{> afQuickField name='hand_color'}}
 				{{> afQuickField name='fingers_color'}}
 			</fieldset>
-			<button type="button" class="btn btn-info" id="personalize-back">Back</button>
-			<button type="submit" class="btn btn-info">Save</button>
+			<button type="button" class="btn btn-info btn-left" id="personalize-back"><i class="fa fa-arrow-left"></i> Back</button>
 			{{#if this.admin_approval}}
-				<button type="button" class="btn btn-info" id="personalize-continue">Continue</button>
+				<button type="submit" class="btn btn-info btn-right" id="personalize-continue">Continue <i class="fa fa-arrow-right"></i></button>
 			{{else}}
+				<button type="submit" class="btn btn-info">Save</button>
 				<label>Awaiting admin approval</label>
 			{{/if}}
 			

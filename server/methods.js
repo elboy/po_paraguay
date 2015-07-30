@@ -9,5 +9,9 @@ Meteor.methods({
 		console.log("data:", data);
 		console.log("image:", image);
 		Images.insert(data);
+	},
+	removeImage: function(imageId){
+		Images.remove(imageId);
+		return "Image removed";
 	}
 });

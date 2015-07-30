@@ -27,7 +27,13 @@ Template.photoFlow.helpers({
 Template.photoFlow.events({
   'click .delete':function(){
     // Remove instance from database
-    Images.remove(this._id);
+    Meteor.call("removeImage", this._id, function(e,r){
+      if(!e){
+        console.log(r);
+      } else {
+        console.log(e);
+      }
+    });
     // Remove photo from cloudinary
     Meteor.call("cloudinary_delete",this.public_id,function(e,r){
       if(!e){
