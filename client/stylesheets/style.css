@@ -14,9 +14,9 @@ body {
 .container {
   background: url("cream_dust.png") repeat 0 0;
   border-radius: 15px;
-  padding-bottom: 10px;
   margin: 0 auto;
   max-width: 1000px;
+  padding-bottom: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,32 +35,25 @@ p, div {
   float: right;
 }
 
-/* To center photo
+/*To center photo*/
 .logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
-*/
-/* to fix sign in button location for large screens
-.navbar-right {
-	position: relative;
-	right: 15px;
+
+.profile-picture {
+  height: 32px;
+  padding-left: 15;
+  padding-right: 15;
+  margin-top: 9px;
 }
-*/
 
 /*
 div {
   border: 1px solid black;
-}
-*/
-
-/*
-.col-xs-6 {
-  padding-bottom: 10px;
-}
-*/
+}*/
 
 
 /* CUSTOMIZE THE 404 NOT FOUND PAGE
@@ -86,9 +79,6 @@ div {
 
 .login-navbar {
   background: #00CC66;
-  padding-top: 30px;
-  padding-left: 100px;
-  padding-bottom: 100px;
 }
 
 
