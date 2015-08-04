@@ -52,7 +52,7 @@ Template.photoFlow.events({
     if(Session.get('anyImages')){
       Router.go('personalize.prosthetic', {_id: this._id});
     } else {
-      console.log("you must submit images first");
+      throwError("You must submit a photo first");
     }
   }
 });
