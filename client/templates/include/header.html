@@ -34,13 +34,10 @@
 </template>
 
 <template name="userLoggedin">
-	{{#if isInRole 'admin'}}
-		<ul class="nav navbar-nav">
-			<li><a href="{{pathFor 'admin'}}">Admin</a></li>
-		</ul>
-	{{/if}}
-
 	<ul class="nav navbar-nav navbar-right">
+		{{#if isInRole 'admin'}}
+			<li><a href="{{pathFor 'admin'}}">Admin</a></li>
+		{{/if}}
 		<li><a href="{{pathFor 'profile.home'}}">Profile</a></li>
 		<li><img class="img-rounded profile-picture" src="{{currentUser.profile.picture}}" alt="Generic"/></li>
 
