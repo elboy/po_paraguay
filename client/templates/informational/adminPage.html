@@ -3,4 +3,20 @@
     <h1>Admin</h1>
     <p class="lead">You are an admin.</p>
   </div>
+  <div class="orders-admin">
+    {{#each this}}
+      {{> orderInfoAdmin}}
+      <hr/>
+    {{/each}}
+  </div>
+</template>
+
+<template name="orderInfoAdmin">
+  <div class="order-admin">
+    {{first_name}}: approved? {{#if admin_approval}} yes {{else}} no <button type="button" class="btn btn-default approve-admin">Approve</button>{{/if}}
+    
+    {{#each photos}}
+      <img class="photo-admin" width="250" src="{{secure_url}}">
+    {{/each}}
+  </div>
 </template>

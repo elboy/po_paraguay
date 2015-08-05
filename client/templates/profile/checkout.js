@@ -3,6 +3,6 @@ Template.checkout.events({
 		Router.go('personalize.prosthetic', {_id: this._id});
 	},
 	'click #submit-order': function(){
-		console.log('YOU COMPLETED THE ORDER');
+		throwError('YOU COMPLETED THE ORDER');
 	}
 });
