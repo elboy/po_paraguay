@@ -1,8 +1,23 @@
 // Local (client only) collection
-Errors = new Mongo.Collection(null);
+Alerts = new Mongo.Collection(null);
 
 throwError = function(message){
-	Errors.insert({
-		message: message
+	Alerts.insert({
+		message: message,
+		color: "alert-danger"
 	});
+};
+
+throwInfo = function(message){
+	Alerts.insert({
+		message: message,
+		color: "alert-info"
+	})
+};
+
+throwWarning = function(message){
+	Alerts.insert({
+		message: message,
+		color: "alert-warning"
+	})
 };

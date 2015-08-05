@@ -1,12 +1,12 @@
-Template.errors.helpers({
-	errors: function(){
-		return Errors.find({});
+Template.alerts.helpers({
+	alerts: function(){
+		return Alerts.find({});
 	}
 });
 
-Template.error.onRendered(function() { 
-	var error = this.data; 
+Template.alert.onRendered(function() { 
+	var alert = this.data; 
 	Meteor.setTimeout(function () {
-		Errors.remove(error._id);
+		Alerts.remove(alert._id);
 	}, 3000);
 });

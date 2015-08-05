@@ -26,12 +26,13 @@ Template.photoFlow.helpers({
 
 Template.photoFlow.events({
   'click .delete':function(){
+    throwWarning("Deleted Photo");
     // Remove instance from database
     Meteor.call("removeImage", this._id, function(e,r){
       if(!e){
         console.log(r);
       } else {
-        console.log(e);
+        throwError(e.reason);
       }
     });
     // Remove photo from cloudinary
@@ -39,7 +40,7 @@ Template.photoFlow.events({
       if(!e){
         console.log(r);
       } else {
-        console.log(e);
+        throwError(e.reason);
       }
     });
   },
@@ -54,5 +55,8 @@ Template.photoFlow.events({
     } else {
       throwError("You must submit a photo first");
     }
+  },
+  'click .upload': function(){
+    throwInfo("Uploading photo");
   }
 });

@@ -26,3 +26,8 @@ Meteor.publish('allPhotos', function(orderId){
 	var userId = this.userId;
 	return Images.find({});
 });
+
+// publishes data of pictures corresponding to current order
+Meteor.publish('allUsers', function(){
+	return Meteor.users.find({});
+});

@@ -1,6 +1,7 @@
 AutoForm.addHooks('insertOrderForm', {
   onError: function (operation, error, template) {
-    console.log(error);
+  	console.log(error);
+    throwError("Form not submitted");
   },
   // this.docId is id of doc attached to the form
   onSuccess: function(formType, result){
