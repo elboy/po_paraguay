@@ -2,6 +2,26 @@
 	<h3><u>Order for: {{this.first_name}} {{this.last_name}}</u></h3>
 
 	<h1>Upload photos:</h1>
+
+	<div>
+		<h3>Saved images</h3>
+		{{#each saved_images}}
+			<br>
+			<img width="250" src="{{secure_url}}">
+			<button class="delete">Delete</button>
+		{{/each}}
+
+		<h3>Upload Photo</h3>
+		<p>
+			<button type="button" id="take-photo" class="btn btn-danger">
+				<span class="fa fa-camera">
+				</span>
+				Upload a photo!
+			</button>
+		</p>
+	</div>
+
+<!--
 	<div>
 		<h3>Saved images</h3>
 		{{#each saved_images}}
@@ -14,7 +34,7 @@
 		{{#c_upload callback="save_url"}}
 			<input class="upload" type="file" multiple="true">
 		{{/c_upload}}
-<!--
+
 		<h3>Upload Photos</h3>
 		{{#c_upload_stream callback="save_url"}}
 			<input type="file" multiple="true">
@@ -23,9 +43,8 @@
 		{{#each c.uploading_images}}
 			<p>{{percent_uploaded}}</p>
 		{{/each}}
--->
 
-	</div>
+-->
 
 
 	<div class="row">

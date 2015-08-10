@@ -8,6 +8,11 @@ Template.photoFlow.created = function(){
   return Session.set('anyImages', 0);
 }
 
+var cameraOptions = {
+  width: 250,
+  height: 200
+};
+
 
 Template.photoFlow.helpers({
   // saved_images gets images corresponding to this order
