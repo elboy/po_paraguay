@@ -12,9 +12,10 @@ ian:accounts-ui-bootstrap-3
 accounts-facebook
 sacha:spin
 blaze
-lepozepo:cloudinary
 aldeed:autoform
 aldeed:collection2
 msavin:mongol
 fortawesome:fontawesome
 alanning:roles
+jquery
+nekojira:cloudinary-jquery-upload

@@ -1,32 +1,37 @@
-Template.photoFlow.created = function(){
-/*
-  Meteor.call("cloudinary_list_all",function(e,list){
-    console.log(list);
-    Session.set("image_list",list);
-  });
-*/
-  return Session.set('anyImages', 0);
-}
+Template.photoFlow.onCreated(function(){
+  Session.set("uploading", 0);
+});
 
-var cameraOptions = {
-  width: 250,
-  height: 200
-};
+Template.photoFlow.onRendered(function() {
+  $('.upload-form').unsigned_cloudinary_upload("payouw7z", { 
+    cloud_name: 'po-paraguay'
+  }, {
+    multiple: true
+  }).bind('cloudinarydone', function (e, data) {
+    $('.thumbnails').append($.cloudinary.image(data.result.public_id, {
+      format: 'jpg',
+      width: 250,
+      height: 250,
+      crop: 'thumb',
+      //gravity: 'face',
+      effect: 'saturation:50'
+    }));
+    Session.set("uploading", 0);
+  }).bind('cloudinaryprogress', function (e, data){
+    console.log("data loaded is : " + data.loaded + " data size : " + data.total);
+    var percent = Math.round((data.loaded * 100.0) / data.total);
+    $('.progress-bar').css('aria-valuenow', percent);
+    $('.progress-bar').css('width', percent + '%');
+    Session.set("uploading", percent);
+  });
+});
 
 
 Template.photoFlow.helpers({
-  // saved_images gets images corresponding to this order
-  'saved_images':function(){
-    var images = Images.find({});
-    Session.set('anyImages', images.count());
-    return images;
+  // if a photo is uploading, show progress bar
+  'uploading':function(){
+    return Session.get("uploading");
   }
-/*
-  ,
-  'image_list':function(){
-    return Session.get("image_list");
-  }
-*/
 });
 
 Template.photoFlow.events({
@@ -34,21 +39,18 @@ Template.photoFlow.events({
     throwWarning("Deleted Photo");
     // Remove instance from database
     Meteor.call("removeImage", this._id, function(e,r){
-      if(!e){
-        console.log(r);
-      } else {
+      if(e){
         throwError(e.reason);
-      }
-    });
-    // Remove photo from cloudinary
-    Meteor.call("cloudinary_delete",this.public_id,function(e,r){
-      if(!e){
-        console.log(r);
       } else {
-        throwError(e.reason);
+        console.log(r);
       }
     });
   },
+  'click .upload': function(){
+    throwInfo("Uploading photo");
+  },
+
+  // Previous / Next buttons
   'click #personal-info': function(){
     // To update personal info
     Router.go('update', {_id: this._id});
@@ -60,8 +62,5 @@ Template.photoFlow.events({
     } else {
       throwError("You must submit a photo first");
     }
-  },
-  'click .upload': function(){
-    throwInfo("Uploading photo");
   }
 });

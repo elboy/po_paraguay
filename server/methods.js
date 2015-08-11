@@ -1,5 +1,16 @@
 // Server side cloudinary methods
 Meteor.methods({
+	// When client side remove image is clicked, delete isntance from database
+	removeImage: function(imageId){
+		Images.remove(imageId);
+		return "Image removed";
+	}
+});
+
+
+
+/*
+
 	save_url: function(image){
 		//image has context and upload_data
 		//Save to a collection
@@ -9,9 +20,6 @@ Meteor.methods({
 		console.log("data:", data);
 		console.log("image:", image);
 		Images.insert(data);
-	},
-	removeImage: function(imageId){
-		Images.remove(imageId);
-		return "Image removed";
 	}
-});
+
+*/

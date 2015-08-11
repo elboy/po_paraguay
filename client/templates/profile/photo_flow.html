@@ -4,49 +4,40 @@
 	<h1>Upload photos:</h1>
 
 	<div>
-		<h3>Saved images</h3>
-		{{#each saved_images}}
-			<br>
-			<img width="250" src="{{secure_url}}">
-			<button class="delete">Delete</button>
-		{{/each}}
-
 		<h3>Upload Photo</h3>
-		<p>
-			<button type="button" id="take-photo" class="btn btn-danger">
-				<span class="fa fa-camera">
+
+		<form class='upload-form'>
+			<span id="chooseme" class="btn btn-danger btn-file">
+    			<span class="fa fa-camera">
 				</span>
-				Upload a photo!
-			</button>
-		</p>
-	</div>
+				Upload a photo! 
+				<input name="file" type="file" class='upload-field cloudinary-fileupload'>
+			</span>
+
+			<br/>
+			<br/>
+			{{#if uploading}}
+				<div class="progress">
+				  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+				  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+				    Loading
+				  </div>
+				</div>
+			{{/if}}
+			
+			<div class='thumbnails'></div>
+		</form>
 
 <!--
-	<div>
-		<h3>Saved images</h3>
-		{{#each saved_images}}
-			<br>
-			<img width="250" src="{{secure_url}}">
-			<button class="delete">Delete</button>
-		{{/each}}
-
-		<h3>Upload Photo</h3>
-		{{#c_upload callback="save_url"}}
-			<input class="upload" type="file" multiple="true">
-		{{/c_upload}}
-
-		<h3>Upload Photos</h3>
-		{{#c_upload_stream callback="save_url"}}
-			<input type="file" multiple="true">
-		{{/c_upload_stream}}
-
-		{{#each c.uploading_images}}
-			<p>{{percent_uploaded}}</p>
-		{{/each}}
-
+		<img width="250" height="250" src="http://res.cloudinary.com/po-paraguay/image/upload/v1438122524/guph3ieckua8kwu5vjad.jpg" class="img-responsive cld-responsive"/>
 -->
 
+		<h3>Saved images</h3>
 
+	</div>
+
+
+	<!-- Previous / Next buttons -->
 	<div class="row">
 		<div class="col-xs-6">
 			<button class="btn btn-info btn-left" id="personal-info"><i class="fa fa-arrow-left"></i> Personal Info</button>
