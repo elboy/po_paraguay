@@ -2,6 +2,15 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+/* Colors
+ * #blue 0 168 225
+ * #yellow 255 207 43
+ * #orange 255 153 61
+ * #coral 255 103 93
+ * #pink 235 77 151
+ * #green 152 194 31
+ */
+
 body {
   /*background: #3399FF;*/
   background: #00CC66;
@@ -45,11 +54,15 @@ p, div {
   padding-bottom: 50px;
 }
 
-.profile-picture {
+.navbar-photo {
   height: 32px;
   padding-left: 15;
   padding-right: 15;
   margin-top: 9px;
+}
+
+.navbar-btn {
+  margin: 8px 15px;
 }
 
 .photo-admin {
@@ -58,7 +71,6 @@ p, div {
 
 img {
   margin: 5px;
-  border: 1px solid black;
 }
 
 .btn-file {

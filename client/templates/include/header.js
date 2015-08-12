@@ -1,3 +1,9 @@
+Template.header.events({
+	'click .home': function(){
+		Router.go('home');
+	}
+});
+
 Template.userLoggedin.events({
 	'click #logout': function(){
 		Meteor.logout(function(err){
@@ -16,5 +22,11 @@ Template.userLoggedin.events({
 				// show alert that says logout
 			}
 		});
-	},
+	}
+});
+
+Template.userLoggedout.events({
+	'click .signin': function(){
+		Router.go('login');
+	}
 });

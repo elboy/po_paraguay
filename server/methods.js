@@ -4,6 +4,10 @@ Meteor.methods({
 	removeImage: function(imageId){
 		Images.remove(imageId);
 		return "Image removed";
+	},
+	addImage: function(data){
+		Images.insert(data);
+		return "Image inserted";
 	}
 });
 
