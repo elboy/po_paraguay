@@ -1,0 +1,163 @@
+<<<<<<< HEAD
+=======
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  /*background: #3399FF;*/
+  background: #00CC66;
+  color: #000000;
+  padding-top: 50px;
+  padding-bottom: 40px;
+/*  line-height: 150%; */
+}
+
+.app-container {
+  background: url("cream_dust.png") repeat 0 0;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Georgia, Times, serif;
+}
+
+p, div {
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+.btn-left {
+  float: left;
+}
+
+.btn-right {
+  float: right;
+}
+
+/*To center photo*/
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+
+.profile-picture {
+  height: 32px;
+  padding-left: 15;
+  padding-right: 15;
+  margin-top: 9px;
+}
+
+.photo-admin {
+  margin-top: 10px;
+}
+
+img {
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/*
+div {
+  border: 1px solid black;
+}*/
+
+
+/* CUSTOMIZE THE 404 NOT FOUND PAGE
+-------------------------------------------------- */
+/*
+.jumbotron{
+  text-align: center;
+}
+*/
+
+.jumbotron h2{
+  font-size: 60px;
+  font-weight: 100;
+}
+
+/* CUSTOMIZE THE ERRORS
+-------------------------------------------------- */
+
+@keyframes fadeOut { 
+  0% {opacity: 0;} 
+  10% {opacity: 1;} 
+  90% {opacity: 1;} 
+  100% {opacity: 0;}
+}
+
+.alert {
+  animation: fadeOut 2700ms ease-in 0s 1 forwards;
+}
+
+
+/* CUSTOMIZE THE LOGIN PAGE
+-------------------------------------------------- */
+
+.login-button {
+  text-align: center;
+}
+
+.login-navbar {
+  background: #00CC66;
+}
+
+
+/* Custom container 
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.container > hr {
+  margin: 30px 0;
+} */
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+>>>>>>> parent of 937c288... Photos show

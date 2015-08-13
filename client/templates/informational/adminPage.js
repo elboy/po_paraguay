@@ -15,15 +15,5 @@ Template.orderInfoAdmin.events({
 				console.log("result: ", result);
 			}
 		});
-	},
-	'click .unapprove-admin': function(){
-		console.log(Meteor.userId());
-		Orders.update(this._id, {$set: {admin_approval: false}}, function(error, result){
-			if (error){
-				console.log("error: ", error);
-			} else {
-				console.log("result: ", result);
-			}
-		});
 	}
 });

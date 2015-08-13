@@ -7,11 +7,11 @@
 		<h3>Upload Photo</h3>
 
 		<form class='upload-form'>
-			<span class="btn btn-danger btn-file">
+			<span id="chooseme" class="btn btn-danger btn-file">
     			<span class="fa fa-camera">
 				</span>
 				Upload a photo! 
-				<input name="file" type="file" class='upload-field cloudinary-fileupload' id="upload-photo">
+				<input name="file" type="file" class='upload-field cloudinary-fileupload'>
 			</span>
 
 			<br/>
@@ -33,9 +33,6 @@
 -->
 
 		<h3>Saved images</h3>
-		{{#each photos}}
-      		<img height="250" width="250" class="photo-user" src="{{secure_url}}">
-    	{{/each}}
 
 	</div>
 
@@ -46,13 +43,8 @@
 			<button class="btn btn-info btn-left" id="personal-info"><i class="fa fa-arrow-left"></i> Personal Info</button>
 		</div>
 		<div class="col-xs-6">
-			{{#if this.admin_approval}}
-				<button class="btn btn-info btn-right" id="personalize-hand">Personalize <i class="fa fa-arrow-right"></i></button>
-			{{else}}
-				<label>Awaiting admin approval</label>
-			{{/if}}
+			<button class="btn btn-info btn-right" id="personalize-hand">Personalize <i class="fa fa-arrow-right"></i></button>
 		</div>
 	</div>
-
 
 </template>

@@ -1,9 +1,3 @@
-Template.header.events({
-	'click .home': function(){
-		Router.go('home');
-	}
-});
-
 Template.userLoggedin.events({
 	'click #logout': function(){
 		Meteor.logout(function(err){
@@ -22,6 +16,7 @@ Template.userLoggedin.events({
 				// show alert that says logout
 			}
 		});
+<<<<<<< HEAD
 	}
 });
 
@@ -30,3 +25,7 @@ Template.userLoggedout.events({
 		Router.go('login');
 	}
 });
+=======
+	},
+});
+>>>>>>> parent of 937c288... Photos show
