@@ -5,13 +5,11 @@
 # but you can also edit it by hand.
 
 meteor-platform
-twbs:bootstrap
 underscore
 iron:router
 ian:accounts-ui-bootstrap-3
 accounts-facebook
 sacha:spin
-blaze
 aldeed:autoform
 aldeed:collection2
 msavin:mongol
