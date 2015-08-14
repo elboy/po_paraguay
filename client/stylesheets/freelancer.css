@@ -10,6 +10,8 @@ body {
 
 p {
     font-size: 20px;
+    /* I added */
+    text-align: justify;
 }
 
 p.small {
@@ -110,6 +112,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
+        /* I edited from 200 */
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -151,6 +154,8 @@ header .intro-text .skills {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    /* I added 
+    height: 81px; */
 }
 
 .navbar a:focus {
