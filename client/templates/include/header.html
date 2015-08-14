@@ -1,32 +1,19 @@
 <template name="header">
     <!-- Fixed navbar -->
-<<<<<<< HEAD
     <nav class="navbar navbar-default navbar-fixed-top">
-    	<div class="container">
-=======
-    <nav class="navbar navbar-inverse navbar-fixed-top">
     	<div class="container-fluid">
->>>>>>> parent of 937c288... Photos show
 
-		    <div class="navbar-header page-scroll">
-		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		    <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-<<<<<<< HEAD
-				<a class="navbar-brand" href="#page-top">Po Paraguay</a>
-<!--				<img class="navbar-photo home" src="po_logo.png" alt="Po Py"/> -->
-=======
-				<a class="navbar-brand" href="{{pathFor 'home'}}">Po Paraguay</a>
-				{{#if currentUser}}			
-				{{/if}}
->>>>>>> parent of 937c288... Photos show
+				<img class="navbar-photo home" src="po_logo.png" alt="Po Py"/>
 		    </div><!--/header -->
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="navigation">
 				{{> userInfo}}
 			</div><!--/.nav-collapse -->
 
@@ -50,7 +37,7 @@
 			<li><a href="{{pathFor 'admin'}}">Admin</a></li>
 		{{/if}}
 		<li><a href="{{pathFor 'profile.home'}}">Profile</a></li>
-		<li><img class="img-rounded profile-picture" src="{{currentUser.profile.picture}}" alt="Generic"/></li>
+		<li><img class="img-rounded navbar-photo" src="{{currentUser.profile.picture}}" alt="Generic"/></li>
 
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -67,27 +54,15 @@
 
 <template name="userLoggedout">
 	<ul class="nav navbar-nav">
-<<<<<<< HEAD
-		<li class="hidden"><a href="#page-top"></a></li>
-		<li><a href="#nosotros">Nosotros</a></li>
-		<li><a href="#servicios">Servicios</a></li>
-		<li><a href="#testimonios">Testimonios</a></li>
-		<li><a href="#contactos">Contactos</a></li>
+		<li><a href="{{pathFor 'extraPages'}}">Nosotros</a></li>
+		<li><a href="{{pathFor 'extraPages'}}">Servicios</a></li>
+		<li><a href="{{pathFor 'extraPages'}}">Testimonios</a></li>
+		<li><a href="{{pathFor 'extraPages'}}">Contactos</a></li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
-		<li><a href="#" class="signin"><i class="fa fa-hand-paper-o"></i> Crear una mano</a></li>
-
-<!--	   <li><button type="button" class="btn btn-info navbar-btn signin"><i class="fa fa-hand-paper-o"></i> Crear una mano</button></li>-->
-
-
+	   <li><button type="button" class="btn btn-info navbar-btn signin"><i class="fa fa-hand-paper-o"></i> Crear una mano</button></li>
 		<!--<li><a href="{{pathFor 'login'}}" class="btn btn-info navbar-button" role="button">Crear una mano</a></li>
 		<li><a href="{{pathFor 'login'}}">Crear una mano</a></li>-->
-=======
-		<li><a href="{{pathFor 'extraPages'}}">Page 1</a></li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right">
-		<li><a href="{{pathFor 'login'}}">Login with Facebook</a></li>
->>>>>>> parent of 937c288... Photos show
 	</ul>
 
 </template>
