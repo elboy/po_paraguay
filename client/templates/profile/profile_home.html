@@ -1,6 +1,7 @@
 <template name="profileHome">
+<div class="container">
 	
-	<h1>Edit an order (progress bars):</h1>
+	<h1>Edit an order:</h1>
 	{{#each orders}}
 		<div class="order">
 			<label>{{> orderItem}}</label>
@@ -18,4 +19,5 @@
 
 	<h1>Create new order:</h1>
 	<a href="{{pathFor 'createOrder'}}" class="btn btn-info" role="button">Create New Hand</a>
+</div>
 </template>

@@ -42,6 +42,7 @@ jquery@1.11.3_2
 json@1.0.3
 lai:collection-extensions@0.1.4
 launch-screen@1.0.2
+less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
@@ -55,6 +56,8 @@ mongo@1.1.0
 mrt:jquery-easing@1.3.0
 msavin:mongol@0.7.2
 nekojira:cloudinary-jquery-upload@0.1.0
+nemo64:bootstrap@3.3.5_2
+nemo64:bootstrap-data@3.3.5
 oauth@1.1.4
 oauth2@1.1.3
 observe-sequence@1.0.6
@@ -73,7 +76,6 @@ spacebars-compiler@1.0.6
 stylus@1.0.7
 templating@1.1.1
 tracker@1.0.7
-twbs:bootstrap@3.3.5
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4

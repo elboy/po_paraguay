@@ -1,27 +1,31 @@
 <template name="adminDashboard">
-  <div class="jumbotron">
-    <h1>Admin</h1>
-    <p class="lead">You are an admin.</p>
-  </div>
-  <div class="orders-admin">
-    {{#each this}}
-      {{> orderInfoAdmin}}
-      <hr/>
-    {{/each}}
-  </div>
+    <div class="jumbotron">
+        <h1>Admin</h1>
+        <p class="lead">You are an admin.</p>
+    </div>
+    <div class="orders-admin">
+        {{#each this}}
+            {{> orderInfoAdmin}}
+            <hr/>
+        {{/each}}
+    </div>
 </template>
 
 <template name="orderInfoAdmin">
-  <div class="order-admin">
-    {{first_name}}: approved? 
-    {{#if admin_approval}} 
-      yes <button type="button" class="btn btn-default unapprove-admin">Unapprove</button> 
-    {{else}} 
-      no <button type="button" class="btn btn-default approve-admin">Approve</button>
-    {{/if}}
+    <div class="order-admin">
+        {{first_name}}: approved? 
+        {{#if admin_approval}} 
+            yes <button type="button" class="btn btn-default unapprove-admin">Unapprove</button> 
+        {{else}} 
+            no <button type="button" class="btn btn-default approve-admin">Approve</button>
+        {{/if}}
 
-    {{#each photos}}
-      <img class="photo-admin" height="250" width="250" src="{{secure_url}}">
-    {{/each}}
-  </div>
+        <div class="row">
+        {{#each photos}}
+            <div class="col-lg-4 col-md-6">
+                {{> photo}}
+            </div>
+        {{/each}}
+        </div>
+    </div>
 </template>

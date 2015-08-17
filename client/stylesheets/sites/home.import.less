@@ -1,11 +1,19 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+// Po Colors
+@po-blue:               #00a8e1;
+@po-yellow:             #ffcf2b;
+@po-orange:             #ff993d;
+@po-coral:              #ff675d;
+@po-pink:               #eb4d99;
+@po-green:              #9ac21f;
 
 body {
     overflow-x: hidden;
+}
+
+@media(max-width:991px) {
+    body {
+        padding-top: 60px;
+    }
 }
 
 p {
@@ -24,7 +32,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #00a8e1;
 }
 
 h1,
@@ -65,7 +73,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: #00a8e1;
 }
 
 hr.star-primary {
@@ -84,7 +92,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: #00a8e1;
 }
 
 header .container {
@@ -110,7 +118,7 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
-@media(min-width:768px) {
+@media(min-width:992px) {
     header .container {
         /* I edited from 200 */
         padding-top: 100px;
@@ -126,7 +134,7 @@ header .intro-text .skills {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:992px) {
     .navbar-fixed-top {
         padding: 10px 0;
         -webkit-transition: padding .3s;
@@ -139,14 +147,6 @@ header .intro-text .skills {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
-    }
-
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
     }
 }
 
@@ -186,7 +186,8 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    /* color blue 0 168 225 I added */
+    background: #00a8e1;
 }
 
 section.success a,
@@ -198,7 +199,7 @@ section.success a.active {
     color: #2c3e50;
 }
 
-@media(max-width:767px) {
+@media(max-width:991px) {
     section {
         padding: 75px 0;
     }
@@ -259,7 +260,7 @@ section.success a.active {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media(min-width:992px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
@@ -279,7 +280,7 @@ section.success a.active {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: #00a8e1;
     background: #fff;
 }
 
@@ -332,7 +333,7 @@ section.success a.active {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: #00a8e1;
 }
 
 form .row:first-child .floating-label-form-group {

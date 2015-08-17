@@ -1,4 +1,5 @@
 <template name="photoFlow">
+<div class="container">
 	<h3><u>Order for: {{this.first_name}} {{this.last_name}}</u></h3>
 
 	<h1>Upload photos:</h1>
@@ -24,8 +25,6 @@
 				  </div>
 				</div>
 			{{/if}}
-			
-			<div class='thumbnails'></div>
 		</form>
 
 <!--
@@ -33,9 +32,13 @@
 -->
 
 		<h3>Saved images</h3>
+		<div class="row">
 		{{#each photos}}
-      		<img height="250" width="250" class="photo-user" src="{{secure_url}}">
+				<div class="col-lg-4">
+					{{> photo}}
+				</div>
     	{{/each}}
+    	</div>
 
 	</div>
 
@@ -54,5 +57,10 @@
 		</div>
 	</div>
 
-
+</div>
 </template>
+
+<template name="photo">
+	<img height="300" width="350" class="photo" src="{{secure_url}}">
+</template>
+

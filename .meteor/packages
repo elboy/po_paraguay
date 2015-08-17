@@ -18,4 +18,5 @@ alanning:roles
 jquery
 nekojira:cloudinary-jquery-upload
 mrt:jquery-easing
-twbs:bootstrap
+less
+nemo64:bootstrap
