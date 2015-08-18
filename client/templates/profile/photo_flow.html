@@ -1,13 +1,9 @@
 <template name="photoFlow">
 <div class="container">
-	<h3><u>Order for: {{this.first_name}} {{this.last_name}}</u></h3>
-
 	<h1>Upload photos:</h1>
 
 	<div>
-		<h3>Upload Photo</h3>
-
-		<form class='upload-form'>
+		<div class='upload-form'>
 			<span class="btn btn-danger btn-file">
     			<span class="fa fa-camera">
 				</span>
@@ -25,7 +21,7 @@
 				  </div>
 				</div>
 			{{/if}}
-		</form>
+		</div>
 
 <!--
 		<img width="250" height="250" src="http://res.cloudinary.com/po-paraguay/image/upload/v1438122524/guph3ieckua8kwu5vjad.jpg" class="img-responsive cld-responsive"/>
@@ -34,7 +30,7 @@
 		<h3>Saved images</h3>
 		<div class="row">
 		{{#each photos}}
-				<div class="col-lg-4">
+				<div class="col-lg-4 col-sm-6">
 					{{> photo}}
 				</div>
     	{{/each}}
@@ -61,6 +57,6 @@
 </template>
 
 <template name="photo">
-	<img height="300" width="350" class="photo" src="{{secure_url}}">
+	<img height="auto" width="100%" class="img-responsive photo" src="{{secure_url}}">
 </template>
 

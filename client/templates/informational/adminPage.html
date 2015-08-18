@@ -1,14 +1,18 @@
 <template name="adminDashboard">
-    <div class="jumbotron">
-        <h1>Admin</h1>
-        <p class="lead">You are an admin.</p>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Admin</h1>
+            <p class="lead">You are an admin.</p>
+        </div>
+        <div class="orders-admin">
+            {{#each this}}
+                {{> orderInfoAdmin}}
+                <hr/>
+            {{/each}}
+        </div>
     </div>
-    <div class="orders-admin">
-        {{#each this}}
-            {{> orderInfoAdmin}}
-            <hr/>
-        {{/each}}
-    </div>
+</div>
 </template>
 
 <template name="orderInfoAdmin">

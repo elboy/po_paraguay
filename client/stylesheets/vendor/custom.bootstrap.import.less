@@ -16,6 +16,14 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+// Po Colors
+@po-blue:				#00a8e1;
+@po-yellow:				#ffcf2b;
+@po-orange:				#ff993d;
+@po-coral:				#ff675d;
+@po-pink:				#eb4d99;
+@po-green:				#9ac21f;
+
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
@@ -37,14 +45,6 @@
 @brand-info:            #00a8e1;
 @brand-warning:         #ffcf2b;
 @brand-danger:          #ff675d;
-
-// Po Colors
-@po-blue:				#00a8e1;
-@po-yellow:				#ffcf2b;
-@po-orange:				#ff993d;
-@po-coral:				#ff675d;
-@po-pink:				#eb4d99;
-@po-green:				#9ac21f;
 
 
 //== Scaffolding
@@ -353,7 +353,7 @@
 @grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
@@ -390,8 +390,8 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
+@navbar-default-color:             #fff; //#777;
+@navbar-default-bg:                @po-green; //#f8f8f8;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links

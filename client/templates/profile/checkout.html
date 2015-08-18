@@ -1,19 +1,22 @@
 <template name="checkout">
-	<h1>Order information:</h1>
-	<ul>
-		<li>Name: {{this.first_name}} {{this.last_name}}</li>
-		{{#if this.left_hand.has}}
-			<li>Left hand: Has wrist movement {{this.left_hand.movement}}</li>
-		{{/if}}
-		{{#if this.right_hand.has}}
-			<li>Right hand: Has wrist movement {{this.right_hand.movement}}</li>
-		{{/if}}
-		<li>Wrist color: {{this.wrist_color}}</li>
-		<li>Hand color: {{this.hand_color}}</li>
-		<li>Finger color: {{this.fingers_color}}</li>
-	</ul>
+	<div class="container">
+		<div class="row">
+			<h1>Order information:</h1>
+			<ul>
+				<li>Name: {{this.first_name}} {{this.last_name}}</li>
+				{{#if this.left_hand.has}}
+					<li>Left hand: Has wrist movement {{this.left_hand.movement}}</li>
+				{{/if}}
+				{{#if this.right_hand.has}}
+					<li>Right hand: Has wrist movement {{this.right_hand.movement}}</li>
+				{{/if}}
+				<li>Wrist color: {{this.wrist_color}}</li>
+				<li>Hand color: {{this.hand_color}}</li>
+				<li>Finger color: {{this.fingers_color}}</li>
+			</ul>
 
-	<button type="button" class="btn btn-info btn-left" id="checkout-back"> <i class="fa fa-arrow-left"></i> Back</button>
-	<button type="button" class="btn btn-info btn-right" id="submit-order">Complete Order <i class="fa fa-arrow-right"></i></button>
-
+			<button type="button" class="btn btn-info btn-left" id="checkout-back"> <i class="fa fa-arrow-left"></i> Back</button>
+			<button type="button" class="btn btn-info btn-right" id="submit-order">Complete Order <i class="fa fa-arrow-right"></i></button>
+		</div>
+	</div>
 </template>

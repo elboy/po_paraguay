@@ -1,30 +1,32 @@
 <template name="createOrder">
-	<h1>Order form:</h1>
-	<div class="order-form">	
-		{{#autoForm collection="Orders" id="insertOrderForm" type="insert"}}
-			<fieldset>
-				<legend>Add an order</legend>
-				{{> afQuickField name='first_name' placeholder="schemaLabel"}}
-				{{> afQuickField name='last_name'}}
-				{{> afQuickField name='gender'}}
-				{{> afQuickField name='date_of_birth'}}
-				{{> afQuickField name='address'}}
-				{{> afQuickField name='phone_number'}}
-				<div class="form-group">
-					{{> afQuickField name='left_hand.has'}}
-					{{#if afFieldValueIs name='left_hand.has' value=true}}
-						{{> afQuickField name='left_hand.movement'}}
-					{{/if}}
-				</div>
-				<div class="form-group">
-					{{> afQuickField name='right_hand.has'}}
-					{{#if afFieldValueIs name='right_hand.has' value=true}}
-						{{> afQuickField name='right_hand.movement'}}
-					{{/if}}
-				</div>
-			</fieldset>
-			<button type="submit" class="btn btn-info">Continue</button>
-		{{/autoForm}}
+	<div class="container">
+		<div class="row">
+			<div class="order-form">	
+				{{#autoForm collection="Orders" id="insertOrderForm" type="insert"}}
+					<fieldset>
+						<legend>Add an order</legend>
+						{{> afQuickField name='first_name' placeholder="schemaLabel"}}
+						{{> afQuickField name='last_name'}}
+						{{> afQuickField name='gender'}}
+						{{> afQuickField name='date_of_birth'}}
+						{{> afQuickField name='address'}}
+						{{> afQuickField name='phone_number'}}
+						<div class="form-group">
+							{{> afQuickField name='left_hand.has'}}
+							{{#if afFieldValueIs name='left_hand.has' value=true}}
+								{{> afQuickField name='left_hand.movement'}}
+							{{/if}}
+						</div>
+						<div class="form-group">
+							{{> afQuickField name='right_hand.has'}}
+							{{#if afFieldValueIs name='right_hand.has' value=true}}
+								{{> afQuickField name='right_hand.movement'}}
+							{{/if}}
+						</div>
+					</fieldset>
+					<button type="submit" class="btn btn-info">Continue</button>
+				{{/autoForm}}
+			</div>
+		</div>
 	</div>
-	
 </template>
