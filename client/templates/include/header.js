@@ -13,7 +13,7 @@ Template.header.events({
 });
 
 Template.header.events({
-	'click .home': function(){
+	'click #home': function(){
 		Router.go('home');
 	}
 });
@@ -31,7 +31,7 @@ Template.userLoggedin.events({
 });
 
 Template.userLoggedout.events({
-	'click .signin': function(){
+	'click #signin': function(){
 		Router.go('login');
 	}
 });
